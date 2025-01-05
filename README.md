@@ -25,6 +25,8 @@ A Salesforce application for managing tasks with the following features:
 https://github.com/hamezksm/task_management.git
 ```
 
+- Execute these commands to deploy your project
+
 ```bash
 # Clone repository
 git clone https://github.com/yourusername/task-management.git
