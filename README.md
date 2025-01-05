@@ -21,7 +21,8 @@ A Salesforce application for managing tasks with the following features:
 
 - Fork the repository
 
-```https://github.com/hamezksm/task_management.git
+```bash
+https://github.com/hamezksm/task_management.git
 ```
 
 ```bash
