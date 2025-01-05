@@ -3,6 +3,7 @@
 ## Overview
 
 A Salesforce application for managing tasks with the following features:
+
 - Custom Task object
 - Lightning Web Component for task management
 - Automated task completion via batch processing
@@ -17,6 +18,11 @@ A Salesforce application for managing tasks with the following features:
 - Git
 
 ### Setup Steps
+
+- Fork the repository
+
+```https://github.com/hamezksm/task_management.git
+```
 
 ```bash
 # Clone repository
