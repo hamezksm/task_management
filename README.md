@@ -29,7 +29,10 @@ https://github.com/hamezksm/task_management.git
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/task-management.git
+git clone https://github.com/yourusername/task_management.git
+
+# Move to the root directory
+cd task_management
 
 # Create scratch org
 sf org create scratch -f config/project-scratch-def.json -a TaskOrg
