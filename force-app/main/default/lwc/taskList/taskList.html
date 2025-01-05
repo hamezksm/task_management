@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Tasks" icon-name="standard:task">
+        <div class="slds-p-around_medium">
+            <template if:true={tasks}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={tasks}
+                    columns={columns}
+                    hide-checkbox-column
+                    onrowaction={handleTaskCompletion}>
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                <div class="slds-text-color_error">
+                    {error.body.message}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
