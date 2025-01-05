@@ -1,40 +1,32 @@
-# Task Manager Salesforce Project
+# Task Management System
 
-This project implements a task management system in Salesforce, including a custom object, Lightning Web Component, batch processing, and REST API endpoint.
+## Overview
 
-## Setup Instructions
+A Salesforce application for managing tasks with the following features:
+- Custom Task object
+- Lightning Web Component for task management
+- Automated task completion via batch processing
+- REST API endpoints for task data
+
+## Installation
 
 ### Prerequisites
 
-- Salesforce CLI installed
-- DevHub org enabled
-- Visual Studio Code with Salesforce Extensions
+- Salesforce CLI
+- Visual Studio Code with Salesforce Extension Pack
+- Git
 
-### Deployment Steps
-
-1.Clone this repository:
+### Setup Steps
 
 ```bash
-git clone [repository-url]
-cd task-manager-salesforce
-```
+# Clone repository
+git clone https://github.com/yourusername/task-management.git
 
-2.Create a scratch org:
+# Create scratch org
+sf org create scratch -f config/project-scratch-def.json -a TaskOrg
 
-```bash
-sfdx force:org:create -f config/project-scratch-def.json -a TaskManagerOrg
-```
-
-3.Push the source to your org:
-
-```bash
-sfdx force:source:push
-```
-
-4.Assign permission set:
-
-```bash
-sfdx force:user:permset:assign -n Task_Manager
+# Deploy metadata
+sf project deploy start
 ```
 
 ## Component Usage
@@ -101,5 +93,5 @@ Or using Postman:
 Run tests using:
 
 ```bash
-sfdx force:apex:test:run --tests TaskCompletionBatchTest --resultformat human
+sf apex test run --tests TaskControllerTest,TaskCompletionBatchTest --resultformat human
 ```
